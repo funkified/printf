@@ -1,0 +1,54 @@
+
+.TH printf "28 June 2019" "0.32" "printf"
+.SH NAME
+.B _printf
+- format and print data.
+.SH SYNOPSIS
+.TP
+.RS i
+.B #include \*(lqholberton.h\*(rq
+.TP
+.B Prototype
+.TP
+.RS i
+.I int _printf(const char *format, ...);
+.SH DESCRIPTION
+This function prints a standard output series of ARGUMENTS to
+.I stdout
+with the following return.
+.SH Returns:
+If successful will return the number of characters printed (excluding the null byte used to end the output to strings).
+.SH Conversion specifiers:
+Conversion specifiers that are going to be handled are as follows.
+.TP
+.B c
+The argument is used to print a character.
+.I (char)
+.TP
+.B s
+This argument is a
+.I pointer (*)
+that points to an array of characters. It has to be remembered that an array ends in a NULL character that indicates the end of the string.
+.TP
+.B i
+This argument is an integer of base 10 and if received it will print as an integer.
+.TP
+.B d
+This argument is in decimal format and if received it will be identified and printed a decimal.
+.TP
+.B %
+It is an argument that will not be converted it will print '%' if the notation is '%%'.
+.TP
+.B b
+The unsigned int argument is converte into a binary notation.
+.TP
+.B r
+The option will convert and print a string in reverse.
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Sergio Vera
+.TP
+Yamil Avila
+.SH SEE ALSO
+printf(3)

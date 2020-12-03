@@ -2,8 +2,8 @@
 #define HEADER_FILE
 #include <stdio.h>
 #include <stdlib.h>
-#include <starg.h>
-
+#include <stdarg.h>
+#include <unistd.h>
 /**
  * struct st - Function that prints the structure
  * @s: pointer that points to a string

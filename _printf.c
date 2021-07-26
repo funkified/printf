@@ -30,12 +30,21 @@ int _printf(const char *format, ...)
 						break;
 				case 'd' :
 						i = va_arg(arg, long int);
+						if (i < 0)
+						{
+							i = -i;
+							_putchar('-');
+						}
 						_puts(convert(i, 10));
 						format++;
 						break;
-
+					case 'i' :
+						i = va_arg(arg, long int);
+						_puts(convert(i, 10));
+						format++;
+						break;
 				case 'o' : 
-						i = va_arg(arg, unsigned int);
+						i = va_arg(arg, long int);
 					    _puts(convert(i, 8));
 						format++;
 						break;
@@ -56,5 +65,6 @@ int _printf(const char *format, ...)
 			i += _putchar(*format);
 	format++;
 	}
+	va_end(arg);
 	return (i);
 }

@@ -20,7 +20,7 @@ int _strlen(char *s)
 {
 	int i = 0;
 
-	while (*s != '\0')
+	while (*s)
 	{
 		s++;
 		i++;
@@ -41,7 +41,7 @@ int print_string(va_list arg)
 {
 	char *str;
 
-	str = (char *)va_arg(arg, char *);
+	str = va_arg(arg, char *);
 
 	return (puts_string(str));
 }
@@ -49,10 +49,10 @@ int print_string(va_list arg)
 char *convert(unsigned int num, int base)
 {
 	static char representation[] = "0123456789ABCDEF";
-	static char buffer[100];
+	static char buffer[1024];
 	char *ptr;
 
-	ptr = &buffer[99];
+	ptr = &buffer[39];
 	*ptr = '\0';
 
 	do

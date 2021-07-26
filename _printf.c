@@ -7,9 +7,15 @@ int _printf(const char *format, ...)
 	int i = 0;
 
 	va_start(arg, format);
-	if (arg == NULL && format == NULL)
+	if (format == NULL)
 		return (-1);
-	while (*format != '\0')
+	if (*format == '%' && *format == '\0')
+		return (-1);
+	va_start(arg, format);
+		if (arg == NULL)
+			return (-1);
+
+	while(*format != '\0')
 	{
 		if (*format == '%')
 		{

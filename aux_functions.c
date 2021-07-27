@@ -25,7 +25,7 @@ int _strlen(char *s)
 		s++;
 		i++;
 	}
-	return (i);
+	return (i + 1);
 }
 
 /*
@@ -40,10 +40,16 @@ int puts_string(char *s)
 int print_string(va_list arg)
 {
 	char *str;
+	int i;
 
 	str = va_arg(arg, char *);
-
-	return (puts_string(str));
+	if (str == '\0')
+		str = "(null)";
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		_putchar(str[i]);
+	}
+	return (i);
 }
 
 char *convert(unsigned int num, int base)

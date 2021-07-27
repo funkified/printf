@@ -43,7 +43,7 @@ int print_string(va_list arg)
 	int i;
 
 	str = va_arg(arg, char *);
-	if (str == '\0')
+	if (*str == '\0')
 		str = "(null)";
 	for (i = 0; str[i] != '\0'; i++)
 	{

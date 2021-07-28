@@ -1,15 +1,15 @@
-#_printf
+# _printf
 
-#Project Description
+# Project Description
 
 Create our own printf function that prints arguments acording to format.
 
-#Return
+# Return
 
 If successful the function will print the characters before the Null byte.
 If not successful wil return a negative value.
 
-#Options
+# Options
 
 %c print a single character
 
@@ -33,11 +33,11 @@ If not successful wil return a negative value.
 
 %% print a percent sign (\% also works)
 
-#Team members
+# Team members
 Sergio Vera
 Gabriela Martinez
 
-##Reference
-###man of help
+## Reference
+**man of help**
 printf (3)
 

@@ -1,15 +1,15 @@
 # _printf
 
-# Project Description
+## Project Description
 
-Create our own printf function that prints arguments acording to format.
+Print ARGUMENT(s) according to FORMAT, or execute according to OPTION.
 
-# Return
+## Return
 
 If successful the function will print the characters before the Null byte.
-If not successful wil return a negative value.
+If not successful it will return a negative value.
 
-# Options
+## Options
 
 **%c**
  print a single character
@@ -44,11 +44,17 @@ If not successful wil return a negative value.
 **%%**
  print a percent sign (\% also works)
 
-# Team members
+## Compilation
+
+$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
+
+You might want to look  at the gcc flag -Wnoformat when testing
+
+## Team members
 Sergio Vera
 Gabriela Martinez
 
-## Reference
+### Reference
 *man of help*
 printf (3)
 

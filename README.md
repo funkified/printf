@@ -2,11 +2,11 @@
 
 #Project Description
 
-Create our own printf function that prints arguments acording to format. 
+Create our own printf function that prints arguments acording to format.
 
 #Return
 
-If successful the function will print the characters before the Null byte. 
+If successful the function will print the characters before the Null byte.
 If not successful wil return a negative value.
 
 #Options

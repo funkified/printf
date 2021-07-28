@@ -16,7 +16,7 @@ output conversion.
 Print ARGUMENTS(s) according to FORMAT, or execute according to OPTION:
 
 .SH RETURN VALUE
-On a successful return, the function will return the number of characters printed (excluding the null byte). 
+On a successful return, the function will return the number of characters printed (excluding the null byte).
 A negative value is returned when the output encounters and error.
 
 .SH OPTIONS
@@ -48,7 +48,7 @@ format specifier to print a string.
 
 .B %S
 .RS
-format specifier to print a string. Non printable characters (0 < ASCII value < 32 or >= 127) are 
+format specifier to print a string. Non printable characters (0 < ASCII value < 32 or >= 127) are
 printed this way: \\x,\ followed by the ASCII code value in hexadecimal (upper case - always 2 characters).
 .RE
 

@@ -1,0 +1,93 @@
+.TH _printf "1" "16 March 2021" "_printf man page"
+.SH NAME
+.B _printf
+.RS
+output conversion.
+.RE
+
+.SH SYNOPSIS
+.B _printf
+.I FORMAT [ARGUMENT]...
+
+.B _printf
+.I OPTION
+
+.SH DESCRIPTION
+Print ARGUMENTS(s) according to FORMAT, or execute according to OPTION:
+
+.SH RETURN VALUE
+On a successful return, the function will return the number of characters printed (excluding the null byte). 
+A negative value is returned when the output encounters and error.
+
+.SH OPTIONS
+
+.B %d, %i
+.RS
+format specifier to print and integer of base 10.
+.RE
+
+.B %b
+.RS
+format specifier to print number in binary.
+.RE
+
+.B %o
+.RS
+format specifier to print value of an octal variable.
+.RE
+
+.B %c
+.RS
+format specifier to print a character.
+.RE
+
+.B %s
+.RS
+format specifier to print a string.
+.RE
+
+.B %S
+.RS
+format specifier to print a string. Non printable characters (0 < ASCII value < 32 or >= 127) are 
+printed this way: \\x,\ followed by the ASCII code value in hexadecimal (upper case - always 2 characters).
+.RE
+
+.B %%
+.RS
+format specifier to print a percent sign.
+.RE
+
+.B %x
+.RS
+format specifier to print value of a lower-case hexadecimal variable.
+.RE
+
+.B %X
+.RS
+format specifier to print value of a upper-case hexadecimal variable.
+.RE
+
+.B %p
+.RS
+format specifier to print an address.
+.RE
+
+.B %u
+.RS
+format specifier to print an unsigned integer.
+.RE
+
+.B %R
+.RS
+format specifier to print the rot13 of a string.
+.RE
+
+.B %r
+.RS
+format specifier to print a reversed string.
+.RE
+
+.SH AUTHOR
+Gabriela Martinez, Sergio Vera.
+.SH SEE ALSO
+.I printf(3)

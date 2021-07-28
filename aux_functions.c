@@ -29,17 +29,6 @@ int _strlen(char *s)
 	}
 	return (i + 1);
 }
-
-/**
- * puts_string - print string
- * @s: string
- * Return: 0
- */
-int puts_string(char *s)
-{
-	return (write(1, s, _strlen(s)));
-}
-
 /**
  * print_string - Handles printing a string as a va_list
  * @arg: holds the argument to print
@@ -81,4 +70,21 @@ char *convert(unsigned int num, int base)
 	} while (num != 0);
 
 	return (ptr);
+}
+/**
+ * _puts - recreates puts function without new line
+ * @s: pointer to string
+ * Return: output with no new line at EOF
+ */
+int _puts(char const *s)
+{
+	size_t i;
+
+	for (i = 0; s[i]; i++)
+
+		if (_putchar(s[i]) == EOF)
+		{
+			return (EOF);
+		}
+	return (0);
 }

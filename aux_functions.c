@@ -14,7 +14,7 @@ int print_char(va_list arg)
 }
 
 /**
- * _strlen -
+ * _strlen - get the lenght f a string
  * @s: string
  * Return: lenght
  */

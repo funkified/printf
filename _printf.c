@@ -9,16 +9,13 @@ int _printf(const char *format, ...)
 	va_list arg;
 	int i = 0;
 
-	va_start(arg, format);
 	if (format == NULL)
 		return (-1);
 	if (*format == '%' && *format == '\0')
 		return (-1);
-	va_start(arg, format);
-		if (arg == NULL)
-			return (-1);
 
-	while(*format != '\0')
+	va_start(arg, format);
+	while (*format != '\0')
 	{
 		if (*format == '%')
 		{
@@ -35,7 +32,7 @@ int _printf(const char *format, ...)
 					format++;
 					break;
 				case 'd':
-					i = va_arg(arg, long int);
+					i = va_arg(arg, int);
 					if (i < 0)
 					{
 						i = -i;
@@ -45,12 +42,12 @@ int _printf(const char *format, ...)
 					format++;
 					break;
 				case 'i':
-					i = va_arg(arg, long int);
+					i = va_arg(arg, int);
 					_puts(convert(i, 10));
 					format++;
 					break;
 				case 'o':
-					i = va_arg(arg, long int);
+					i = va_arg(arg, int);
 					_puts(convert(i, 8));
 					format++;
 					break;

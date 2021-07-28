@@ -1,5 +1,8 @@
 #include "holberton.h"
 /**
+ * _printf -print an output of given argumetn
+ * @format: format given
+ * Return: output of any type
  */
 int _printf(const char *format, ...)
 {

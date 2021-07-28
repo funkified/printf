@@ -13,6 +13,8 @@ int print_char(va_list arg)
 }
 /**
  * _strlen -
+ * @s: string
+ * Return: lenght
  */
 int _strlen(char *s)
 {
@@ -27,7 +29,9 @@ int _strlen(char *s)
 }
 
 /**
- * puts_string -
+ * puts_string - print string
+ * @s: string
+ * Return: 0
  */
 int puts_string(char *s)
 {
@@ -52,55 +56,26 @@ int print_string(va_list arg)
 	}
 	return (i);
 }
+/**
+ * convert - convert a number into any base
+ * @num: number
+ * @base: base
+ * Return: number
+*/
 
 char *convert(unsigned int num, int base)
 {
-	static char representation[] = "0123456789ABCDEF";
-	static char buffer[1024];
+	char representation[] = "0123456789ABCDEF";
+	char buffer[1024];
 	char *ptr;
 
 	ptr = &buffer[39];
 	*ptr = '\0';
 
-	do
-	{
+	do {
 		*--ptr = representation[num % base];
 		num /= base;
-	}
-       	while (num != 0);
+	} while (num != 0);
 
 	return (ptr);
 }
-
-/**
-int print_dec(va_list arg)
- 	{
-	unsigned int *nums;
-	long int count = 0;
-
-	nums = (unsigned int *) malloc(sizeof(va_arg(arg, unsigned int *)));
-	if (*nums == '\0')
-		return ('\0');
-	while (nums[count] == '\0')
-	{
-		if (nums[count] == 0)
-		{
-			_putchar('0');
-			count++;
-		}
-		else if (count < 0)
-		{
-			_putchar('-');
-			count = -count;
-			return (-1);
-		}
-		if (nums[count] > 0)
-		{
-			_putchar(count);
-			count++;
-		}
-	}
-	va_end(arg);
-	return (count);
-}
-*/

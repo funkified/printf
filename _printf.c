@@ -1,5 +1,8 @@
 #include "holberton.h"
 /**
+ * _printf -print an output of given argumetn
+ * @format: format given
+ * Return: output of any type
  */
 int _printf(const char *format, ...)
 {
@@ -15,7 +18,7 @@ int _printf(const char *format, ...)
 		if (arg == NULL)
 			return (-1);
 
-	while(*format != '\0')
+	while (*format != '\0')
 	{
 		if (*format == '%')
 		{

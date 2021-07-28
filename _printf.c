@@ -11,11 +11,19 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-	if (*format == '%' && *format == '\0')
+/**	if (*format == '%' && *format == '\0')
 		return (-1);
+<<<<<<< HEAD
 
 	va_start(arg, format);
 	while (*format != '\0')
+=======
+	va_start(arg, format);
+		if (arg == NULL)
+			return (-1);
+*/
+	while(*format != '\0')
+>>>>>>> b5942c8bb048d33b05e32932c32f5bfafc215d97
 	{
 		if (*format == '%')
 		{

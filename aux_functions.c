@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * print_char - prints a single character
  * @arg: contains arguments
@@ -11,6 +12,7 @@ int print_char(va_list arg)
 	c = (char)va_arg(arg, int);
 	return (_putchar(c));
 }
+
 /**
  * _strlen -
  * @s: string
@@ -37,6 +39,7 @@ int puts_string(char *s)
 {
 	return (write(1, s, _strlen(s)));
 }
+
 /**
  * print_string - Handles printing a string as a va_list
  * @arg: holds the argument to print
@@ -56,13 +59,13 @@ int print_string(va_list arg)
 	}
 	return (i);
 }
+
 /**
  * convert - convert a number into any base
  * @num: number
  * @base: base
  * Return: number
 */
-
 char *convert(unsigned int num, int base)
 {
 	char representation[] = "0123456789ABCDEF";

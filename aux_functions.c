@@ -1,13 +1,9 @@
 #include "holberton.h"
-
-/*/
+/**
+ * print_char - prints a single character
+ * @arg: contains arguments
+ * Return: a character
  */
-
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
 int print_char(va_list arg)
 {
 	char c;
@@ -15,7 +11,9 @@ int print_char(va_list arg)
 	c = (char)va_arg(arg, int);
 	return (_putchar(c));
 }
-
+/**
+ * _strlen -
+ */
 int _strlen(char *s)
 {
 	int i = 0;
@@ -28,14 +26,17 @@ int _strlen(char *s)
 	return (i + 1);
 }
 
-/*
+/**
+ * puts_string -
  */
 int puts_string(char *s)
 {
 	return (write(1, s, _strlen(s)));
 }
-
-/*
+/**
+ * print_string - Handles printing a string as a va_list
+ * @arg: holds the argument to print
+ * Return: Ammount of chars printed, -1 if not
  */
 int print_string(va_list arg)
 {
@@ -65,13 +66,15 @@ char *convert(unsigned int num, int base)
 	{
 		*--ptr = representation[num % base];
 		num /= base;
-	} while (num != 0);
+	}
+       	while (num != 0);
 
 	return (ptr);
 }
 
-/*int print_dec(va_list arg)
-{
+/**
+int print_dec(va_list arg)
+ 	{
 	unsigned int *nums;
 	long int count = 0;
 
@@ -99,4 +102,5 @@ char *convert(unsigned int num, int base)
 	}
 	va_end(arg);
 	return (count);
-}*/
+}
+*/

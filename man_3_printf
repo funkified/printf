@@ -6,85 +6,71 @@ output conversion.
 .RE
 
 .SH SYNOPSIS
-.B _printf
-.I FORMAT [ARGUMENT]...
 
 .B _printf
 .I OPTION
 
 .SH DESCRIPTION
-Print ARGUMENTS(s) according to FORMAT, or execute according to OPTION:
+Create our own printf function that prints arguments acording to format.:
 
 .SH RETURN VALUE
-On a successful return, the function will return the number of characters printed (excluding the null byte).
-A negative value is returned when the output encounters and error.
+If successful the function will print the characters before the Null byte. If not successful wil return a negative value.
 
 .SH OPTIONS
 
-.B %d, %i
+.B %c
 .RS
-format specifier to print and integer of base 10.
+ print a single character
 .RE
 
-.B %b
+.B %d
 .RS
-format specifier to print number in binary.
+print a decimal (base 10) number
+.RE
+
+.B %e
+.RS
+print an exponential floating-point number
+.RE
+
+.B %f
+.RS
+print a floating-point number
+.RE
+
+.B %g
+.RS
+print a general-format floating-point number
+.RE
+
+.B %i
+.RS
+print an integer in base 10
 .RE
 
 .B %o
 .RS
-format specifier to print value of an octal variable.
-.RE
-
-.B %c
-.RS
-format specifier to print a character.
+print a number in octal (base 8)
 .RE
 
 .B %s
 .RS
-format specifier to print a string.
+print a string of characters
 .RE
 
-.B %S
+.B%u
 .RS
-format specifier to print a string. Non printable characters (0 < ASCII value < 32 or >= 127) are
-printed this way: \\x,\ followed by the ASCII code value in hexadecimal (upper case - always 2 characters).
-.RE
-
-.B %%
-.RS
-format specifier to print a percent sign.
+print an unsigned decimal (base 10) number
 .RE
 
 .B %x
 .RS
-format specifier to print value of a lower-case hexadecimal variable.
+print a number in hexidecimal (base 16)
 .RE
 
-.B %X
+.B %%
 .RS
-format specifier to print value of a upper-case hexadecimal variable.
-.RE
-
-.B %p
-.RS
-format specifier to print an address.
-.RE
-
-.B %u
-.RS
-format specifier to print an unsigned integer.
-.RE
-
-.B %R
-.RS
-format specifier to print the rot13 of a string.
-.RE
-
-.B %r
-.RS
-format specifier to print a reversed string.
+print a percent sign (\% also works)
 .RE
 
 .SH AUTHOR
